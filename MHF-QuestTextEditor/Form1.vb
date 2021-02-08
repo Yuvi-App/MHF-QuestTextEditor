@@ -435,57 +435,116 @@ Public Class Form1
 
     Private Sub btnTranslateDictionary_Click(sender As Object, e As EventArgs) Handles btnTranslateDictionary.Click
         Dim Mname As String
+        Try
+            For Each k In MonsterName.Monster.Keys
+                If txtQuestType.Text.Contains(k) Then
+                    Dim input As String = txtQuestType.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = MonsterName.Monster.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEQuestType.Text = result
+                End If
+                If txtMainObj.Text.Contains(k) Then
+                    Dim input As String = txtMainObj.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = MonsterName.Monster.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEMainObj.Text = result
+                End If
+                If txtSubA.Text.Contains(k) Then
+                    Dim input As String = txtSubA.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = MonsterName.Monster.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtESubA.Text = result
+                End If
+                If txtSubB.Text.Contains(k) Then
+                    Dim input As String = txtSubB.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = MonsterName.Monster.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtESubB.Text = result
+                End If
+                If txtClear.Text.Contains(k) Then
+                    Dim input As String = txtClear.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = MonsterName.Monster.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEClear.Text = result
+                End If
+                If txtFail.Text.Contains(k) Then
+                    Dim input As String = txtFail.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = MonsterName.Monster.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEFail.Text = result
+                End If
+                If rtfDescription.Text.Contains(k) Then
+                    Dim input As String = rtfDescription.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = MonsterName.Monster.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    rtfEDescription.Text = result
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Failed to lookup Monster Names")
+        End Try
 
-        For Each k In MonsterName.Monster.Keys
-            If txtQuestType.Text.Contains(k) Then
-                Dim input As String = txtQuestType.Text
-                Dim pattern As String = "(" + k + ")"
-                Dim replace As String = MonsterName.Monster.Item(k)
-                Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
-                txtEQuestType.Text = result
-            End If
-            If txtMainObj.Text.Contains(k) Then
-                Dim input As String = txtMainObj.Text
-                Dim pattern As String = "(" + k + ")"
-                Dim replace As String = MonsterName.Monster.Item(k)
-                Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
-                txtEMainObj.Text = result
-            End If
-            If txtSubA.Text.Contains(k) Then
-                Dim input As String = txtSubA.Text
-                Dim pattern As String = "(" + k + ")"
-                Dim replace As String = MonsterName.Monster.Item(k)
-                Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
-                txtESubA.Text = result
-            End If
-            If txtSubB.Text.Contains(k) Then
-                Dim input As String = txtSubB.Text
-                Dim pattern As String = "(" + k + ")"
-                Dim replace As String = MonsterName.Monster.Item(k)
-                Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
-                txtESubB.Text = result
-            End If
-            If txtClear.Text.Contains(k) Then
-                Dim input As String = txtClear.Text
-                Dim pattern As String = "(" + k + ")"
-                Dim replace As String = MonsterName.Monster.Item(k)
-                Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
-                txtEClear.Text = result
-            End If
-            If txtFail.Text.Contains(k) Then
-                Dim input As String = txtFail.Text
-                Dim pattern As String = "(" + k + ")"
-                Dim replace As String = MonsterName.Monster.Item(k)
-                Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
-                txtEFail.Text = result
-            End If
-            If rtfDescription.Text.Contains(k) Then
-                Dim input As String = rtfDescription.Text
-                Dim pattern As String = "(" + k + ")"
-                Dim replace As String = MonsterName.Monster.Item(k)
-                Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
-                rtfEDescription.Text = result
-            End If
-        Next
+        Try
+            For Each k In ItemName.Items.Keys
+                If txtQuestType.Text.Contains(k) Then
+                    Dim input As String = txtQuestType.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = ItemName.Items.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEQuestType.Text = result
+                End If
+                If txtMainObj.Text.Contains(k) Then
+                    Dim input As String = txtMainObj.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = ItemName.Items.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEMainObj.Text = result
+                End If
+                If txtSubA.Text.Contains(k) Then
+                    Dim input As String = txtSubA.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = ItemName.Items.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtESubA.Text = result
+                End If
+                If txtSubB.Text.Contains(k) Then
+                    Dim input As String = txtSubB.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = ItemName.Items.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtESubB.Text = result
+                End If
+                If txtClear.Text.Contains(k) Then
+                    Dim input As String = txtClear.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = ItemName.Items.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEClear.Text = result
+                End If
+                If txtFail.Text.Contains(k) Then
+                    Dim input As String = txtFail.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = ItemName.Items.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    txtEFail.Text = result
+                End If
+                If rtfDescription.Text.Contains(k) Then
+                    Dim input As String = rtfDescription.Text
+                    Dim pattern As String = "(" + k + ")"
+                    Dim replace As String = ItemName.Items.Item(k)
+                    Dim result As String = Regex.Replace(input, pattern, replace, RegexOptions.IgnoreCase)
+                    rtfEDescription.Text = result
+                End If
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Failed to Lookup Item Names")
+        End Try
     End Sub
 End Class
