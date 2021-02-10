@@ -65,6 +65,7 @@ Partial Class Form1
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnSaveAlltoTxt = New System.Windows.Forms.Button()
         Me.btnTranslateDictionary = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -411,11 +412,22 @@ Partial Class Form1
         Me.btnTranslateDictionary.Text = "Dictionary Translate"
         Me.btnTranslateDictionary.UseVisualStyleBackColor = True
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(831, 19)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(36, 9)
+        Me.Label14.TabIndex = 14
+        Me.Label14.Text = "Yuvi v0.6"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(929, 513)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnTranslateDictionary)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label13)
@@ -507,4 +519,5 @@ Partial Class Form1
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnSaveAlltoTxt As Button
     Friend WithEvents btnTranslateDictionary As Button
+    Friend WithEvents Label14 As Label
 End Class

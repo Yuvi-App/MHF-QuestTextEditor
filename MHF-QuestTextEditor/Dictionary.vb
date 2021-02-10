@@ -168,7 +168,6 @@
         }
     End Class
 
-
     Public Class ItemName
         Public Shared Items As Dictionary(Of String, String) = New Dictionary(Of String, String)() From {
             {"回復薬	", "Potion"},
@@ -197,4 +196,41 @@
             {"生命の粉塵", "Lifepowder"}
         }
     End Class
+
+    Public Class FieldName
+        Public Shared Field As Dictionary(Of String, String) = New Dictionary(Of String, String)() From {
+            {"峡谷", "Gorge"},
+            {"高地", "Highland"},
+            {"潮島", "Tide Island"},
+            {"極海", "Polar Sea"},
+            {"花畑", "Flower Field"},
+            {"白湖", "White Lake"},
+            {"彩の滝", "Painted Waterfalls"},
+            {"樹海頂部", "Great Forest Peak"},
+            {"巣穴", "Nest Hole"},
+            {"絶島", "Solitude Island"},
+            {"絶島地底", "Solitude Island Depths"},
+            {"火口深部", "Deep Crater"},
+            {"竹林奥部", "Bamboo Forest"},
+            {"大型探査船", "Large Exploration Ship"},
+            {"最果ての地", "World's End"},
+            {"天廊", "Sky Corridor"},
+            {"雲見砦", "Cloud Viewing Fortress"},
+            {"古跡", "Historical Site"},
+            {"迎撃拠点", "Interceptor's Base"},
+            {"新大闘技場", "Competition Arena"}
+        }
+    End Class
+
+    Public Class CommonTerms
+        Public Shared Terms As Dictionary(Of String, String) = New Dictionary(Of String, String)() From {
+            {"ハンターズギルド", "Hunters Guild"},
+            {"なし", "None"},
+            {"１頭の狩猟", "Hunt 1 "},
+            {"３回力尽きる", "• Faint 3 times "},
+            {"タイムアップ", "• Time expires "},
+            {"メインターゲットの達成", "Complete Main Objective"}
+        }
+    End Class
+
 End Namespace
